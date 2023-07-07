@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <title>Laboratorio III - Vidal Pablo</title>
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <nav>
+            <img id="img-logo" src="images/logo.png" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>CRUD de Anuncios</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Administrador de anuncios</h2>
+            <form id="form">
+                <label id="label-nombre" for="Nombre">Nombre</label>
+                <input type="text" name="txtNombre" id="Nombre" autocomplete="off" placeholder="Ingrese nombre" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                <label for="Alias">Alias</label>
+                <input type="text" name="txtAlias" id="Alias" autocomplete="off" placeholder="Ingrese alter-ego" required pattern="^([a-zA-ZñÑáéíóúÁÉÍÓÚ]{2,}\s?)*(?<!\s)$">
+                
+                <label for="Marvel">Editorial</label>
+                <div class="div-editorial">
+                    <label for="Marvel">Marvel</label>
+                    <input type="radio" id="Marvel" name="rdoEditorial" value="Marvel" checked>
+                    <label for="DcComics">DCComics</label>
+                    <input type="radio" id="DcComics" name="rdoEditorial" value="Dc Comics">
+                </div>
+
+                <label id="label-fuerza" for="fuerza">Fuerza</label>
+                <input type="range" name="rngFuerza" placeholder="fuerza" min="1" max="999" value="200">
+
+                <label id="label-arma" for="Arma">Arma</label>
+                <select name="slcArma" id="armas">
+                </select>
+
+                <input type="hidden" name="txtId">
+                <div id="botones-form" class="botones-form">
+                </div>
+            </form>
+        </section>
+        <section id="table-section">
+            <h2>Tabla de Superheroes</h2>
+        </section>
+
+        <section id="etiquetas-section">
+            <h2>Lista de Superheroes</h2>
+        </section>
+    </main>
+    
+    <footer>
+        <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Anuncios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p>Laboratorio III - Todos los Derechos Reservados 2020 &copy;</p>
+    </footer>
+    <div id="custom-alert" class="custom-alert">
+        <div class="custom-alert-content">
+          <h3 id="custom-alert-title"></h3>
+          <p id="custom-alert-message"></p>
+          <div class="custom-alert-buttons">
+            <button id="custom-alert-accept">Aceptar</button>
+            <button id="custom-alert-reject">Rechazar</button>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
